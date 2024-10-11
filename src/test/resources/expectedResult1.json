@@ -1,0 +1,27 @@
+{
+  "id": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Core schema meta-schema",
+  "type": "object",
+  "properties": {
+    "Id": {"type": "integer"},
+    "Content": {"type": "string"},
+    "ItemsCount": {"type": "integer"},
+    "Icon": {"type": "integer"},
+    "ItemType": {"type": "integer"},
+    "Parented": {"type": "null"},
+    "Collapsed": {"type": "boolean"},
+    "ItemOrder": {"type": "integer"},
+    "Children":  {"type": "array"},
+    "IsProjectShared": {"type": "boolean"},
+    "ProjectShareOwnerName": {"type": "null"},
+    "ProjectShareOwnerEmail": {"type": "null"},
+    "IsShareApproved": {"type": "boolean"},
+    "IsOwnProject": {"type": "boolean"},
+    "LastSyncedDateTime":  {"type": "string"},
+    "LastUpdatedDate":  {"type": "string"},
+    "Deleted": {"type": "boolean"},
+    "SyncClientCreationId": {"type": "null"}
+
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "integer"
+    },
+    "Content": {
+      "type": "string"
+    },
+    "ItemsCount": {
+      "type": "integer"
+    },
+    "Icon": {
+      "type": "integer"
+    },
+    "ItemType": {
+      "type": "integer"
+    },
+    "Collapsed": {
+      "type": "boolean"
+    },
+    "ItemOrder": {
+      "type": "integer"
+    },
+    "Children": {
+      "type": "array",
+      "items": {}
+    },
+    "IsProjectShared": {
+      "type": "boolean"
+    },
+    "ProjectShareOwnerName": {
+      "type": "null"
+    },
+    "ProjectShareOwnerEmail": {
+      "type": "null"
+    },
+    "IsShareApproved": {
+      "type": "boolean"
+    },
+    "IsOwnProject": {
+      "type": "boolean"
+    },
+    "LastSyncedDateTime": {
+      "type": "string"
+    },
+    "LastUpdatedDate": {
+      "type": "string"
+    },
+    "Deleted": {
+      "type": "boolean"
+    },
+    "SyncClientCreationId": {
+      "type": "null"
+    }
+  },
+  "required": [
+    "Id",
+    "Content",
+    "ItemsCount",
+    "Icon",
+    "ItemType",
+    "Collapsed",
+    "ItemOrder",
+    "Children",
+    "IsProjectShared",
+    "ProjectShareOwnerName",
+    "ProjectShareOwnerEmail",
+    "IsShareApproved",
+    "IsOwnProject",
+    "LastSyncedDateTime",
+    "LastUpdatedDate",
+    "Deleted",
+    "SyncClientCreationId"
+  ]
+}
