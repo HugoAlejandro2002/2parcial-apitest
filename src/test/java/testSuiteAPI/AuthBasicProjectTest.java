@@ -11,23 +11,41 @@ import java.util.Base64;
 
 import static org.hamcrest.Matchers.equalTo;
 
-public class CRUDUserTest extends BasicAuthTestBase {
-
-    private String userId;
-
+public class AuthBasicProjectTest extends BasicAuthTestBase  {
     @Test
-    @DisplayName("Verify the create, update, delete user - todo.ly")
-    public void crudUserTest() {
+    @DisplayName("Create a user, create a project, delete the user, try to create a project again")
+    public void createUserProjectAndDeleteUser() {
         createUser();
-        updateUser();
+
+        JSONObject projectBody = new JSONObject();
+        projectBody.put("Content", "First Project");
+
+        request.setUrl(ApiConfig.CREATE_PROJECT)
+                .setHeaders(auth, valueAuth)
+                .setBody(projectBody.toString());
+
+        Response projectResponse = FactoryRequest.make("post").send(request);
+        projectResponse.then().statusCode(200)
+                .body("Content", equalTo("First Project"));
+
         deleteUser();
+
+        request.setUrl(ApiConfig.CREATE_PROJECT)
+                .setHeaders(auth, valueAuth)
+                .setBody(projectBody.toString());
+
+        projectResponse = FactoryRequest.make("post").send(request);
+
+        projectResponse.then().statusCode(200)
+                .body("ErrorMessage", equalTo("Account doesn't exist"))
+                .body("ErrorCode", equalTo(105));
     }
 
     public void createUser() {
         JSONObject userBody = new JSONObject();
-        userBody.put("Email", "newuser2024b2b@todo.ly");
-        userBody.put("FullName", "John Doe");
-        userBody.put("Password", "securePassword");
+        userBody.put("Email", "testuser2024@todo.ly");
+        userBody.put("FullName", "Test User");
+        userBody.put("Password", "TestPassword123");
 
         request.setUrl(ApiConfig.CREATE_USER)
                 .setHeaders("Content-Type", "application/json")
@@ -42,38 +60,18 @@ public class CRUDUserTest extends BasicAuthTestBase {
         ApiConfig.user = userBody.get("Email").toString();
         ApiConfig.pwd = userBody.get("Password").toString();
         valueAuth = "Basic " + Base64.getEncoder().encodeToString((ApiConfig.user + ":" + ApiConfig.pwd).getBytes());
-
-    }
-
-    public void updateUser() {
-        JSONObject updateBody = new JSONObject();
-        updateBody.put("Email", "updateduser2024b2b@todo.ly");
-        updateBody.put("FullName", "John Updated Doe");
-
-        request.setUrl(ApiConfig.UPDATE_USER)
-                .setHeaders(auth, valueAuth)
-                .setHeaders("Content-Type", "application/json")
-                .setBody(updateBody.toString());
-
-        Response response = FactoryRequest.make("put").send(request);
-
-        response.then().statusCode(200)
-                .body("Email", equalTo(updateBody.get("Email")));
-
-        ApiConfig.user = updateBody.get("Email").toString();
-        valueAuth = "Basic " + Base64.getEncoder().encodeToString((ApiConfig.user + ":" + ApiConfig.pwd).getBytes());
-
     }
 
     public void deleteUser() {
+
         request.setUrl(ApiConfig.DELETE_USER)
                 .setHeaders(auth, valueAuth);
 
         Response response = FactoryRequest.make("delete").send(request);
 
+
         response.then().statusCode(200)
                 .body("Email", equalTo(ApiConfig.user))
-                .body("Id", equalTo(Integer.parseInt(response.then().extract().path("Id").toString())));
-
+                .body("FullName", equalTo("Test User"));
     }
 }

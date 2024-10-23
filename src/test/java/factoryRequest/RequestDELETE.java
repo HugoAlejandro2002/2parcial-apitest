@@ -8,10 +8,10 @@ public class RequestDELETE implements IRequest{
     @Override
     public Response send(RequestInfo requestInfo) {
         Response response = given()
-                    .headers(requestInfo.getHeaders())
-                    .log().all()
+                .headers(requestInfo.getHeaders())
+                .log().all()
                 .when()
-                 .delete(requestInfo.getUrl());
+                .delete(requestInfo.getUrl());
         response.then().log().all();
         return response;
     }
