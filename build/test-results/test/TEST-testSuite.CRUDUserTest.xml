@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testSuite.CRUDUserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-11T22:28:55" hostname="HUGOALEJANDRO" time="6.462">
+  <properties/>
+  <testcase name="Verify the create, update, delete user - todo.ly" classname="testSuite.CRUDUserTest" time="6.462"/>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	https://todo.ly/api/user.json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "Email": "newuser2024b2b@todo.ly",
+    "FullName": "John Doe",
+    "Password": "securePassword"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+Set-Cookie: ASP.NET_SessionId=ga1unumptjxkxfanfgpxv155; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Fri, 11 Oct 2024 22:29:02 GMT
+Content-Length: 295
+
+{
+    "Id": 795400,
+    "Email": "newuser2024b2b@todo.ly",
+    "Password": null,
+    "FullName": "John Doe",
+    "TimeZone": 0,
+    "IsProUser": false,
+    "DefaultProjectId": 4358445,
+    "AddItemMoreExpanded": false,
+    "EditDueDateMoreExpanded": false,
+    "ListSortType": 0,
+    "FirstDayOfWeek": 0,
+    "NewTaskDueDate": -1,
+    "TimeZoneId": "Pacific Standard Time"
+}
+Usuario creado correctamente
+Request method:	PUT
+Request URI:	https://todo.ly/api/user/0.json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic bmV3dXNlcjIwMjRiMmJAdG9kby5seTpzZWN1cmVQYXNzd29yZA==
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "Email": "updateduser2024b2b@todo.ly",
+    "FullName": "John Updated Doe"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+Set-Cookie: ASP.NET_SessionId=gsmv3rzxi0qrgib4shcja0yo; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Fri, 11 Oct 2024 22:29:04 GMT
+Content-Length: 307
+
+{
+    "Id": 795400,
+    "Email": "updateduser2024b2b@todo.ly",
+    "Password": null,
+    "FullName": "John Updated Doe",
+    "TimeZone": 0,
+    "IsProUser": false,
+    "DefaultProjectId": 4358445,
+    "AddItemMoreExpanded": false,
+    "EditDueDateMoreExpanded": false,
+    "ListSortType": 0,
+    "FirstDayOfWeek": 0,
+    "NewTaskDueDate": -1,
+    "TimeZoneId": "Pacific Standard Time"
+}
+Usuario actualizado correctamente
+Request method:	DELETE
+Request URI:	https://todo.ly/api/user/0.json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Basic dXBkYXRlZHVzZXIyMDI0YjJiQHRvZG8ubHk6c2VjdXJlUGFzc3dvcmQ=
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+Set-Cookie: ASP.NET_SessionId=to1waxxqzurduqa2prbl1z5b; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Fri, 11 Oct 2024 22:29:05 GMT
+Content-Length: 307
+
+{
+    "Id": 795400,
+    "Email": "updateduser2024b2b@todo.ly",
+    "Password": null,
+    "FullName": "John Updated Doe",
+    "TimeZone": 0,
+    "IsProUser": false,
+    "DefaultProjectId": 4358445,
+    "AddItemMoreExpanded": false,
+    "EditDueDateMoreExpanded": false,
+    "ListSortType": 0,
+    "FirstDayOfWeek": 0,
+    "NewTaskDueDate": -1,
+    "TimeZoneId": "Pacific Standard Time"
+}
+Usuario eliminado correctamente
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

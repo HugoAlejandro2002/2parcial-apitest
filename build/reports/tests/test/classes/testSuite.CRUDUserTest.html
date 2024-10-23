@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CRUDUserTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CRUDUserTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/testSuite.html">testSuite</a> &gt; CRUDUserTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">6.462s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Verify the create, update, delete user - todo.ly</td>
+<td class="success">crudUserTest()</td>
+<td class="success">6.462s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Request method:	POST
+Request URI:	https://todo.ly/api/user.json
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;Email&quot;: &quot;newuser2024b2b@todo.ly&quot;,
+    &quot;FullName&quot;: &quot;John Doe&quot;,
+    &quot;Password&quot;: &quot;securePassword&quot;
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+Set-Cookie: ASP.NET_SessionId=ga1unumptjxkxfanfgpxv155; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Fri, 11 Oct 2024 22:29:02 GMT
+Content-Length: 295
+
+{
+    &quot;Id&quot;: 795400,
+    &quot;Email&quot;: &quot;newuser2024b2b@todo.ly&quot;,
+    &quot;Password&quot;: null,
+    &quot;FullName&quot;: &quot;John Doe&quot;,
+    &quot;TimeZone&quot;: 0,
+    &quot;IsProUser&quot;: false,
+    &quot;DefaultProjectId&quot;: 4358445,
+    &quot;AddItemMoreExpanded&quot;: false,
+    &quot;EditDueDateMoreExpanded&quot;: false,
+    &quot;ListSortType&quot;: 0,
+    &quot;FirstDayOfWeek&quot;: 0,
+    &quot;NewTaskDueDate&quot;: -1,
+    &quot;TimeZoneId&quot;: &quot;Pacific Standard Time&quot;
+}
+Usuario creado correctamente
+Request method:	PUT
+Request URI:	https://todo.ly/api/user/0.json
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Basic bmV3dXNlcjIwMjRiMmJAdG9kby5seTpzZWN1cmVQYXNzd29yZA==
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;Email&quot;: &quot;updateduser2024b2b@todo.ly&quot;,
+    &quot;FullName&quot;: &quot;John Updated Doe&quot;
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+Set-Cookie: ASP.NET_SessionId=gsmv3rzxi0qrgib4shcja0yo; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Fri, 11 Oct 2024 22:29:04 GMT
+Content-Length: 307
+
+{
+    &quot;Id&quot;: 795400,
+    &quot;Email&quot;: &quot;updateduser2024b2b@todo.ly&quot;,
+    &quot;Password&quot;: null,
+    &quot;FullName&quot;: &quot;John Updated Doe&quot;,
+    &quot;TimeZone&quot;: 0,
+    &quot;IsProUser&quot;: false,
+    &quot;DefaultProjectId&quot;: 4358445,
+    &quot;AddItemMoreExpanded&quot;: false,
+    &quot;EditDueDateMoreExpanded&quot;: false,
+    &quot;ListSortType&quot;: 0,
+    &quot;FirstDayOfWeek&quot;: 0,
+    &quot;NewTaskDueDate&quot;: -1,
+    &quot;TimeZoneId&quot;: &quot;Pacific Standard Time&quot;
+}
+Usuario actualizado correctamente
+Request method:	DELETE
+Request URI:	https://todo.ly/api/user/0.json
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Basic dXBkYXRlZHVzZXIyMDI0YjJiQHRvZG8ubHk6c2VjdXJlUGFzc3dvcmQ=
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/8.0
+Set-Cookie: ASP.NET_SessionId=to1waxxqzurduqa2prbl1z5b; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Fri, 11 Oct 2024 22:29:05 GMT
+Content-Length: 307
+
+{
+    &quot;Id&quot;: 795400,
+    &quot;Email&quot;: &quot;updateduser2024b2b@todo.ly&quot;,
+    &quot;Password&quot;: null,
+    &quot;FullName&quot;: &quot;John Updated Doe&quot;,
+    &quot;TimeZone&quot;: 0,
+    &quot;IsProUser&quot;: false,
+    &quot;DefaultProjectId&quot;: 4358445,
+    &quot;AddItemMoreExpanded&quot;: false,
+    &quot;EditDueDateMoreExpanded&quot;: false,
+    &quot;ListSortType&quot;: 0,
+    &quot;FirstDayOfWeek&quot;: 0,
+    &quot;NewTaskDueDate&quot;: -1,
+    &quot;TimeZoneId&quot;: &quot;Pacific Standard Time&quot;
+}
+Usuario eliminado correctamente
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.8</a> at Oct 11, 2024, 6:29:02 PM</p>
+</div>
+</div>
+</body>
+</html>
